@@ -1,36 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="/script.js" defer></script>
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="name">Todo</div>
+        <img class="style" id="styleBtn" alt="sun" />
+      </header>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+      <main>
+        <div class="content">
+          <form class="todo-add">
+            <input
+              type="text"
+              name="todo-input"
+              id="todo-input"
+              placeholder="Create a new todo"
+            />
+            <input type="submit" value="" class="submit" />
+          </form>
 
-  Todo
-
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <div class="todo-container">
+            <ul class="todo-list">
+              <li class="list-item">
+                <button class="check"></button>
+                <p class="item-content">1</p>
+                <button class="trash-button"></button>
+              </li>
+            </ul>
+            <div class="bottom-container">
+              <div>
+                <p class="items"></p>
+              </div>
+              <div class="desktop-filter">
+                <button class="desktop-select-all active">All</button>
+                <button class="desktop-select-active">Active</button>
+                <button class="desktop-select-completed">Completed</button>
+              </div>
+              <div>
+                <button class="select-clear">Clear Completed</button>
+              </div>
+            </div>
+          </div>
+          <div class="filter">
+            <button class="select-all active">All</button>
+            <button class="select-active">Active</button>
+            <button class="select-completed">Completed</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
 </html>
